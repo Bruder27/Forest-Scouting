@@ -17,6 +17,7 @@ shape = SubResource("BoxShape3D_reejc")
 
 [node name="RayCast3D" type="RayCast3D" parent="CameraPivot/Camera3D" unique_id=1733440685]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+visible = false
 target_position = Vector3(0, -2, 0)
 collision_mask = 2
 
