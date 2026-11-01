@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://dfhxmhply5wmu"]
+
+[ext_resource type="Script" uid="uid://th03b3gdyn2b" path="res://2. scripts/main.gd" id="1_5svqj"]
+[ext_resource type="PackedScene" uid="uid://bw57fy0cm5uya" path="res://1. scenes/player.tscn" id="1_i5cee"]
+[ext_resource type="Script" uid="uid://cuv1pw2drr1hg" path="res://2. scripts/pause_menu.gd" id="2_5svqj"]
+
+[node name="Node3D" type="Node3D" unique_id=1016068706]
+script = ExtResource("1_5svqj")
+
+[node name="CharacterBody3D" parent="." unique_id=1920897796 instance=ExtResource("1_i5cee")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=561841539]
+
+[node name="PauseMenu" type="Control" parent="CanvasLayer" unique_id=1598642765]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("2_5svqj")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/PauseMenu" unique_id=842594650]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Pause Menu" type="Label" parent="CanvasLayer/PauseMenu/Panel" unique_id=450844877]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -47.5
+offset_top = 64.0
+offset_right = 47.5
+offset_bottom = 87.0
+grow_horizontal = 2
+text = "Pause Menu"
+horizontal_alignment = 1
+
+[node name="Resume" type="Button" parent="CanvasLayer/PauseMenu/Panel" unique_id=776810153]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -31.5
+offset_right = 43.0
+offset_bottom = -0.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Resume"
+
+[node name="Exit" type="Button" parent="CanvasLayer/PauseMenu/Panel" unique_id=230321517]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = 0.5
+offset_right = 43.0
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit"
+
+[connection signal="pressed" from="CanvasLayer/PauseMenu/Panel/Resume" to="CanvasLayer/PauseMenu" method="_on_resume_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseMenu/Panel/Exit" to="CanvasLayer/PauseMenu" method="_on_exit_pressed"]
