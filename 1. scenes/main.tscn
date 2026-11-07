@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://htu1dp71qly" path="res://objects/sosna.glb" id="7_272bh"]
 [ext_resource type="Script" uid="uid://cuv1pw2drr1hg" path="res://2. scripts/pause_menu.gd" id="8_5vw27"]
 [ext_resource type="PackedScene" uid="uid://e2banc07m7ff" path="res://objects/note.glb" id="10_4c57u"]
-[ext_resource type="Texture2D" uid="uid://cs08g3mf6v1bc" path="res://assets/background_forest.png" id="10_w7oib"]
+[ext_resource type="Texture2D" uid="uid://62kv6uthcufw" path="res://assets/Long background.png" id="11_ymsi5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w7oib"]
 sky_top_color = Color(0.4392157, 0.6666667, 1, 1)
@@ -1032,84 +1032,53 @@ environment = SubResource("Environment_vghmk")
 [node name="background_trees" type="Node3D" parent="." unique_id=639071052]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -91.12863, 5.294, 119.55946)
 
-[node name="background" type="Sprite3D" parent="background_trees" unique_id=68583721]
-texture = ExtResource("10_w7oib")
+[node name="background15" type="Sprite3D" parent="background_trees" unique_id=2131733279]
+transform = Transform3D(0.5, 0, 5.9604645e-08, 0, 0.5, 0, -5.9604645e-08, 0, 0.5, -1.8212833, 0.3295195, 5.914963)
+texture = ExtResource("11_ymsi5")
 
-[node name="background2" type="Sprite3D" parent="background_trees" unique_id=542363517]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.267462, 0, 0)
-texture = ExtResource("10_w7oib")
+[node name="background21" type="Sprite3D" parent="background_trees" unique_id=1662571508]
+transform = Transform3D(0.5, 0, 5.9604645e-08, 0, 0.5, 0, -5.9604645e-08, 0, 0.5, 17.592922, 0.3295195, 5.914963)
+texture = ExtResource("11_ymsi5")
 
-[node name="background3" type="Sprite3D" parent="background_trees" unique_id=1458573974]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.6964, 0, 0)
-texture = ExtResource("10_w7oib")
+[node name="background22" type="Sprite3D" parent="background_trees" unique_id=1000311270]
+transform = Transform3D(0.5, 0, 5.9604645e-08, 0, 0.5, 0, -5.9604645e-08, 0, 0.5, 37.05576, 0.3295195, 5.914963)
+texture = ExtResource("11_ymsi5")
 
-[node name="background4" type="Sprite3D" parent="background_trees" unique_id=341658555]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.42894, 0, 0)
-texture = ExtResource("10_w7oib")
+[node name="background23" type="Sprite3D" parent="background_trees" unique_id=1443829397]
+transform = Transform3D(-8.1460335e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -8.1460335e-08, 46.779785, 0.3295195, -3.8232765)
+texture = ExtResource("11_ymsi5")
 
-[node name="background5" type="Sprite3D" parent="background_trees" unique_id=563031512]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.931, 0, 0)
-texture = ExtResource("10_w7oib")
+[node name="background24" type="Sprite3D" parent="background_trees" unique_id=305163041]
+transform = Transform3D(-8.1460335e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -8.1460335e-08, 46.779785, 0.3295195, -23.237482)
+texture = ExtResource("11_ymsi5")
 
-[node name="background16" type="Sprite3D" parent="background_trees" unique_id=699444050]
-transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, 41.57332, 0, -4.6429615)
-texture = ExtResource("10_w7oib")
+[node name="background25" type="Sprite3D" parent="background_trees" unique_id=2098769393]
+transform = Transform3D(-8.1460335e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -8.1460335e-08, 46.779785, 0.3295195, -42.700317)
+texture = ExtResource("11_ymsi5")
 
-[node name="background17" type="Sprite3D" parent="background_trees" unique_id=1204111603]
-transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, 41.57332, 0, -13.910429)
-texture = ExtResource("10_w7oib")
+[node name="background26" type="Sprite3D" parent="background_trees" unique_id=1329819751]
+transform = Transform3D(-0.5, 0, -1.0331603e-07, 0, 0.5, 0, 1.0331603e-07, 0, -0.5, 37.07773, 0.3295195, -52.439625)
+texture = ExtResource("11_ymsi5")
 
-[node name="background18" type="Sprite3D" parent="background_trees" unique_id=32413332]
-transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, 41.57332, 0, -32.339367)
-texture = ExtResource("10_w7oib")
+[node name="background27" type="Sprite3D" parent="background_trees" unique_id=1773220884]
+transform = Transform3D(-0.5, 0, -1.0331603e-07, 0, 0.5, 0, 1.0331603e-07, 0, -0.5, 17.663517, 0.3295195, -52.439625)
+texture = ExtResource("11_ymsi5")
 
-[node name="background19" type="Sprite3D" parent="background_trees" unique_id=259497571]
-transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, 41.57332, 0, -23.071907)
-texture = ExtResource("10_w7oib")
+[node name="background28" type="Sprite3D" parent="background_trees" unique_id=709933239]
+transform = Transform3D(-0.5, 0, -1.0331603e-07, 0, 0.5, 0, 1.0331603e-07, 0, -0.5, -1.7993183, 0.3295195, -52.439625)
+texture = ExtResource("11_ymsi5")
 
-[node name="background20" type="Sprite3D" parent="background_trees" unique_id=895419364]
-transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.3711392e-08, 41.57332, 0, -41.57397)
-texture = ExtResource("10_w7oib")
+[node name="background29" type="Sprite3D" parent="background_trees" unique_id=624215460]
+transform = Transform3D(1.2517172e-07, 0, -0.5, 0, 0.5, 0, 0.5, 0, 1.2517172e-07, -11.536083, 0.3295195, -42.6923)
+texture = ExtResource("11_ymsi5")
 
-[node name="background6" type="Sprite3D" parent="background_trees" unique_id=1628436965]
-transform = Transform3D(-1, 0, -8.7422784e-08, 0, 1, 0, 8.7422784e-08, 0, -1, 36.93035, 0, -46.216286)
-texture = ExtResource("10_w7oib")
+[node name="background30" type="Sprite3D" parent="background_trees" unique_id=1195372586]
+transform = Transform3D(1.2517172e-07, 0, -0.5, 0, 0.5, 0, 0.5, 0, 1.2517172e-07, -11.536083, 0.3295195, -23.278078)
+texture = ExtResource("11_ymsi5")
 
-[node name="background7" type="Sprite3D" parent="background_trees" unique_id=1252327311]
-transform = Transform3D(-1, 0, -8.7422784e-08, 0, 1, 0, 8.7422784e-08, 0, -1, 27.662888, 0, -46.216286)
-texture = ExtResource("10_w7oib")
-
-[node name="background8" type="Sprite3D" parent="background_trees" unique_id=959259995]
-transform = Transform3D(-1, 0, -8.7422784e-08, 0, 1, 0, 8.7422784e-08, 0, -1, 9.233948, 0, -46.216286)
-texture = ExtResource("10_w7oib")
-
-[node name="background9" type="Sprite3D" parent="background_trees" unique_id=663992857]
-transform = Transform3D(-1, 0, -8.7422784e-08, 0, 1, 0, 8.7422784e-08, 0, -1, 18.501408, 0, -46.216286)
-texture = ExtResource("10_w7oib")
-
-[node name="background10" type="Sprite3D" parent="background_trees" unique_id=232827663]
-transform = Transform3D(-1, 0, -8.7422784e-08, 0, 1, 0, 8.7422784e-08, 0, -1, -0.00065612793, 0, -46.216286)
-texture = ExtResource("10_w7oib")
-
-[node name="background11" type="Sprite3D" parent="background_trees" unique_id=625909200]
-transform = Transform3D(1.3113417e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113417e-07, -4.642973, 0, -41.573326)
-texture = ExtResource("10_w7oib")
-
-[node name="background12" type="Sprite3D" parent="background_trees" unique_id=2018739478]
-transform = Transform3D(1.3113417e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113417e-07, -4.642973, 0, -32.30586)
-texture = ExtResource("10_w7oib")
-
-[node name="background13" type="Sprite3D" parent="background_trees" unique_id=1541138150]
-transform = Transform3D(1.3113417e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113417e-07, -4.642971, 0, -13.876919)
-texture = ExtResource("10_w7oib")
-
-[node name="background14" type="Sprite3D" parent="background_trees" unique_id=154705540]
-transform = Transform3D(1.3113417e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113417e-07, -4.642973, 0, -23.14438)
-texture = ExtResource("10_w7oib")
-
-[node name="background15" type="Sprite3D" parent="background_trees" unique_id=663233122]
-transform = Transform3D(1.3113417e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113417e-07, -4.642969, 0, -4.642315)
-texture = ExtResource("10_w7oib")
+[node name="background31" type="Sprite3D" parent="background_trees" unique_id=1458708164]
+transform = Transform3D(1.2517172e-07, 0, -0.5, 0, 0.5, 0, 0.5, 0, 1.2517172e-07, -11.536083, 0.3295195, -3.8152447)
+texture = ExtResource("11_ymsi5")
 
 [connection signal="pressed" from="CanvasLayer/PauseMenu/Panel/Resume" to="CanvasLayer/PauseMenu" method="_on_resume_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/Panel/Exit" to="CanvasLayer/PauseMenu" method="_on_exit_pressed"]
