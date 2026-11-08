@@ -11,7 +11,7 @@ var target_velocity = Vector3.ZERO
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	$CanvasLayer/Label.visible = false
+	$CanvasLayer/E.visible = false
 	$CameraPivot/Camera3D/paper.visible = false
 
 func _physics_process(_delta):
@@ -42,6 +42,7 @@ func _physics_process(_delta):
 	note_on_screen()
 	entering_house()
 	zoom()
+	todo_list()
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * mouse_sensitivity)
@@ -67,18 +68,18 @@ func sprint():
 func label_visibility():
 	if $CameraPivot/Camera3D/paper.visible == false:
 		if $CameraPivot/Camera3D/RayCast3D.is_colliding():
-			$CanvasLayer/Label.visible = true
+			$CanvasLayer/E.visible = true
 		else: 
-			$CanvasLayer/Label.visible = false
+			$CanvasLayer/E.visible = false
 	else: 
-		$CanvasLayer/Label.visible = false
+		$CanvasLayer/E.visible = false
 
 
 func note_on_screen():
 	if ray.is_colliding():
 		var object = ray.get_collider()
 		
-		if object == $"../note/Cube/StaticBody3D":
+		if object == $"../objects/note/Cube/StaticBody3D":
 			if Input.is_action_pressed("press_e"):
 				$CameraPivot/Camera3D/paper.visible = true
 
@@ -92,7 +93,7 @@ func entering_house():
 	if ray.is_colliding():
 		var collider = ray.get_collider()
 		if Input.is_action_pressed("press_e"):
-			if collider == $"../house/Cube_001/StaticBody3D":
+			if collider == $"../objects/house/Cube_001/StaticBody3D":
 				get_tree().change_scene_to_file("res://1. scenes/house_inside.tscn")
 
 
@@ -101,3 +102,18 @@ func zoom():
 		$CameraPivot/Camera3D.fov = 45
 	else:
 		$CameraPivot/Camera3D.fov = default_fov
+
+var objective_status = 0
+
+func todo_list():
+	if ray.is_colliding():
+		var object = ray.get_collider()
+		if objective_status == 0:
+			if object == $"../objects/house/Cube_001/StaticBody3D":
+				$hud/ToDo.text = "To do:
+					- find note"
+				objective_status += 1
+
+		if object == $"../objects/note/Cube/StaticBody3D":
+				$hud/ToDo.text = "To do
+				- WHATS ON NOTE?"

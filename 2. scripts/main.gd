@@ -1,6 +1,6 @@
 extends Node3D
 
-@onready var pause_menu = $CanvasLayer/PauseMenu
+@onready var pause_menu = $PauseMenu
 
 func _ready():
 	pause_menu.visible = false

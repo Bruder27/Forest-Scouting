@@ -17,10 +17,16 @@ config/icon="uid://wjn5ar35bk54"
 
 [display]
 
-window/size/viewport_width=1200
-window/size/viewport_height=800
+window/size/viewport_width=1900
+window/size/viewport_height=1000
+window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor]
+
+movie_writer/movie_file="C:/Users/bruder27/Desktop/horror indie/Forest-Scouting/taki plik"
+movie_writer/disable_vsync=true
 
 [input]
 
