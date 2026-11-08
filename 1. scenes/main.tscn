@@ -31,6 +31,9 @@ volumetric_fog_density = 0.01
 [sub_resource type="BoxMesh" id="BoxMesh_reejc"]
 size = Vector3(3.1607819, 1.8295898, 1.6782227)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ymsi5"]
+size = Vector3(3.16, 1.83, 1.67)
+
 [node name="Main" type="Node3D" unique_id=1933362152]
 script = ExtResource("1_5vw27")
 
@@ -1108,8 +1111,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -91.6342, 0.9446205, 140.1346
 mesh = SubResource("BoxMesh_reejc")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="objects/car/MeshInstance3D" unique_id=112385256]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="objects/car/MeshInstance3D/StaticBody3D" unique_id=1948292964]
+shape = SubResource("BoxShape3D_ymsi5")
 
 [connection signal="pressed" from="PauseMenu/PauseMenu/Panel/Resume" to="PauseMenu/PauseMenu" method="_on_resume_pressed"]
 [connection signal="pressed" from="PauseMenu/PauseMenu/Panel/Exit" to="PauseMenu/PauseMenu" method="_on_exit_pressed"]

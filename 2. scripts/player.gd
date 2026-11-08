@@ -43,6 +43,8 @@ func _physics_process(_delta):
 	entering_house()
 	zoom()
 	todo_list()
+	crouch()
+	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * mouse_sensitivity)
@@ -117,3 +119,10 @@ func todo_list():
 		if object == $"../objects/note/Cube/StaticBody3D":
 				$hud/ToDo.text = "To do
 				- WHATS ON NOTE?"
+
+
+func crouch():
+	if Input.is_action_pressed("crouching"):
+		$CameraPivot.position.y = -0.5
+	else:
+		$CameraPivot.position.y = 0
