@@ -1,6 +1,6 @@
 extends Control
 
-var full_size = Vector2i(1900, 1200)
+
 func _on_resume_pressed() -> void:
 	get_tree().paused = false
 	visible = false
@@ -9,6 +9,7 @@ func _on_resume_pressed() -> void:
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 
 #for later
 #func _on_resolution_full_pressed() -> void:

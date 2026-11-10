@@ -5,6 +5,9 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_reejc"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_reejc"]
+height = 2.0179749
+
 [sub_resource type="GDScript" id="GDScript_y8i4x"]
 script/source = "extends Camera3D
 
@@ -26,6 +29,10 @@ script = ExtResource("1_y8i4x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1341448130]
 shape = SubResource("BoxShape3D_reejc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1098776644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.51119006, 0.51789117)
+mesh = SubResource("CapsuleMesh_reejc")
 
 [node name="CameraPivot" type="Marker3D" parent="." unique_id=1422232668]
 
@@ -69,4 +76,4 @@ offset_top = 10.0
 offset_right = 202.0
 offset_bottom = 59.0
 text = "To do:
-- go find forester's house"
+- find forester's house"

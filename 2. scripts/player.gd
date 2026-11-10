@@ -44,6 +44,7 @@ func _physics_process(_delta):
 	zoom()
 	todo_list()
 	crouch()
+	house_door_use()
 	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -126,3 +127,18 @@ func crouch():
 		$CameraPivot.position.y = -0.5
 	else:
 		$CameraPivot.position.y = 0
+
+var open_door = false
+func house_door_use():
+	if ray.is_colliding():
+		var object = ray.get_collider()
+		if object == $"../house_door_pivot/house_door/StaticBody3D":
+			if  open_door == false:
+				if Input.is_action_just_pressed("press_e"):
+					open_door = true
+					$"../house_door_pivot".rotation.y = deg_to_rad(180)
+
+			elif open_door:
+				if Input.is_action_just_pressed("press_e"):
+					open_door = false
+					$"../house_door_pivot".rotation.y = deg_to_rad(90)
