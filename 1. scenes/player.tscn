@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ddov48q2pkdhx" path="res://objects/paper.glb" id="2_2uxur"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_reejc"]
+size = Vector3(1, 2, 1.5117188)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_reejc"]
 height = 2.0179749
@@ -28,6 +29,7 @@ collision_mask = 3
 script = ExtResource("1_y8i4x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1341448130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0.3173828)
 shape = SubResource("BoxShape3D_reejc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1098776644]

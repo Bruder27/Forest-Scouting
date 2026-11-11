@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 @export var speed: float = 6.0
+@export var gravity = 9.8
 @export var fall_acceleration = 75
 @export var mouse_sensitivity := 0.002
 @onready var camera = $CameraPivot/Camera3D
@@ -37,6 +38,10 @@ func _physics_process(_delta):
 	target_velocity.z = direction.z * speed
 
 	velocity = target_velocity
+	
+	if not is_on_floor():
+		velocity.y -= gravity
+	
 	move_and_slide()
 	sprint()
 	note_on_screen()
