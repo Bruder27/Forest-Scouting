@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://th03b3gdyn2b" path="res://2. scripts/main.gd" id="1_5vw27"]
 [ext_resource type="PackedScene" uid="uid://bw57fy0cm5uya" path="res://1. scenes/player.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://dj288jxmpqp0r" path="res://1. scenes/pause_menu.tscn" id="2_w7oib"]
 [ext_resource type="PackedScene" uid="uid://dxfbuh1x25pbq" path="res://objects/mapfix.glb" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://her421ityga8" path="res://objects/cave.glb" id="4_lquwl"]
 [ext_resource type="PackedScene" uid="uid://b1o5r7sxm5fuk" path="res://objects/house.glb" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://clo0j1k6a5gxa" path="res://objects/watchTower.glb" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://htu1dp71qly" path="res://objects/sosna.glb" id="7_272bh"]
-[ext_resource type="Script" uid="uid://cuv1pw2drr1hg" path="res://2. scripts/pause_menu.gd" id="8_5vw27"]
 [ext_resource type="PackedScene" uid="uid://e2banc07m7ff" path="res://objects/note.glb" id="10_4c57u"]
 [ext_resource type="Texture2D" uid="uid://62kv6uthcufw" path="res://assets/Long background.png" id="11_ymsi5"]
 
@@ -45,82 +45,10 @@ size = Vector2(1, 2)
 points = PackedVector3Array(-0.5, -1, 0, 0.5, -1, 0, -0.5, 1, 0, 0.5, 1, 0)
 
 [node name="Main" type="Node3D" unique_id=1933362152]
+process_mode = 3
 script = ExtResource("1_5vw27")
 
-[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1138844881]
-process_mode = 3
-
-[node name="PauseMenu" type="Control" parent="PauseMenu" unique_id=1742735634]
-process_mode = 2
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-script = ExtResource("8_5vw27")
-
-[node name="Panel" type="Panel" parent="PauseMenu/PauseMenu" unique_id=436676140]
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-
-[node name="Pause Menu" type="Label" parent="PauseMenu/PauseMenu/Panel" unique_id=788086331]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -47.5
-offset_top = 64.0
-offset_right = 47.5
-offset_bottom = 87.0
-grow_horizontal = 2
-text = "Pause Menu"
-horizontal_alignment = 1
-
-[node name="Resume" type="Button" parent="PauseMenu/PauseMenu/Panel" unique_id=1632477888]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -43.0
-offset_top = -31.5
-offset_right = 43.0
-offset_bottom = -0.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Resume"
-
-[node name="Exit" type="Button" parent="PauseMenu/PauseMenu/Panel" unique_id=1200624875]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -43.0
-offset_top = 0.5
-offset_right = 43.0
-offset_bottom = 31.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Exit"
-
-[node name="Resolution_full" type="Button" parent="PauseMenu/PauseMenu/Panel" unique_id=319651708]
-layout_mode = 0
-offset_left = 518.0
-offset_top = 468.0
-offset_right = 693.0
-offset_bottom = 499.0
-text = "Resolution full screen"
-
-[node name="Resolution_window" type="Button" parent="PauseMenu/PauseMenu/Panel" unique_id=1252862514]
-layout_mode = 0
-offset_left = 518.0
-offset_top = 505.0
-offset_right = 673.0
-offset_bottom = 536.0
-text = "Resolution window"
+[node name="PauseMenu" parent="." unique_id=1953535691 instance=ExtResource("2_w7oib")]
 
 [node name="CharacterBody3D" parent="." unique_id=1920897796 instance=ExtResource("2_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.20363, 1.6000005, 93.62993)
@@ -1128,23 +1056,19 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="objects/car/MeshInstance3D/StaticBody3D" unique_id=1948292964]
 shape = SubResource("BoxShape3D_ymsi5")
 
-[node name="house_door_pivot" type="Node3D" parent="." unique_id=1155560205]
+[node name="house_door_pivot" type="Node3D" parent="objects" unique_id=1155560205]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -85.7929, 1, 82.77549)
 
-[node name="house_door" type="MeshInstance3D" parent="house_door_pivot" unique_id=323201689]
+[node name="house_door" type="MeshInstance3D" parent="objects/house_door_pivot" unique_id=323201689]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4999466, 0, 0)
 mesh = SubResource("QuadMesh_reejc")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="house_door_pivot/house_door" unique_id=763416674]
+[node name="StaticBody3D" type="StaticBody3D" parent="objects/house_door_pivot/house_door" unique_id=763416674]
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="house_door_pivot/house_door/StaticBody3D" unique_id=2130944203]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="objects/house_door_pivot/house_door/StaticBody3D" unique_id=2130944203]
 shape = SubResource("ConvexPolygonShape3D_w7oib")
-
-[connection signal="pressed" from="PauseMenu/PauseMenu/Panel/Resume" to="PauseMenu/PauseMenu" method="_on_resume_pressed"]
-[connection signal="pressed" from="PauseMenu/PauseMenu/Panel/Exit" to="PauseMenu/PauseMenu" method="_on_exit_pressed"]
-[connection signal="pressed" from="PauseMenu/PauseMenu/Panel/Resolution_full" to="PauseMenu/PauseMenu" method="_on_resolution_full_pressed"]
 
 [editable path="objects/house"]
 [editable path="objects/note"]

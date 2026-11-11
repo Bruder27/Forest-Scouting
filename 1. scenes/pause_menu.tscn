@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://dj288jxmpqp0r"]
+
+[ext_resource type="Script" uid="uid://cuv1pw2drr1hg" path="res://2. scripts/pause_menu.gd" id="1_lr6wt"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1953535691]
+process_mode = 3
+
+[node name="PauseMenu" type="Control" parent="." unique_id=1982390370]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_lr6wt")
+
+[node name="Panel" type="Panel" parent="PauseMenu" unique_id=1120209204]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Pause Menu" type="Label" parent="PauseMenu/Panel" unique_id=621643051]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -47.5
+offset_top = 64.0
+offset_right = 47.5
+offset_bottom = 87.0
+grow_horizontal = 2
+text = "Pause Menu"
+horizontal_alignment = 1
+
+[node name="Resume" type="Button" parent="PauseMenu/Panel" unique_id=483946756]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -31.5
+offset_right = 43.0
+offset_bottom = -0.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Resume"
+
+[node name="Exit" type="Button" parent="PauseMenu/Panel" unique_id=663919871]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = 0.5
+offset_right = 43.0
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit"
+
+[node name="Resolution_full" type="Button" parent="PauseMenu/Panel" unique_id=315818243]
+layout_mode = 0
+offset_left = 518.0
+offset_top = 468.0
+offset_right = 693.0
+offset_bottom = 499.0
+text = "Resolution full screen"
+
+[node name="Resolution_window" type="Button" parent="PauseMenu/Panel" unique_id=875516081]
+layout_mode = 0
+offset_left = 518.0
+offset_top = 505.0
+offset_right = 673.0
+offset_bottom = 536.0
+text = "Resolution window"
+
+[connection signal="pressed" from="PauseMenu/Panel/Resume" to="PauseMenu" method="_on_resume_pressed"]
+[connection signal="pressed" from="PauseMenu/Panel/Exit" to="PauseMenu" method="_on_exit_pressed"]
+[connection signal="pressed" from="PauseMenu/Panel/Resolution_full" to="PauseMenu" method="_on_resolution_full_pressed"]

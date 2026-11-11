@@ -49,6 +49,18 @@ collision_mask = 2
 transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, 0, 0, -1.1696546)
 visible = false
 
+[node name="note_info" type="Label" parent="CameraPivot/Camera3D/paper" unique_id=373304846]
+visible = false
+offset_left = 713.0
+offset_top = 291.0
+offset_right = 1174.0
+offset_bottom = 451.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Hej, witaj w nowej pracy leśniczego, niestety przez najbliższe kilka dni będziesz pracował sam ponieważ musze zająć się innym obszarem, rozpisze ci tu czego trzeba każdego dnia przypilnować"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=84158575]
 
 [node name="E" type="Label" parent="CanvasLayer" unique_id=872578755]
